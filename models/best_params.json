@@ -1,0 +1,53 @@
+{
+  "rf": {
+    "params": {
+      "n_estimators": 100,
+      "min_samples_leaf": 20,
+      "max_features": "sqrt",
+      "max_depth": 7,
+      "class_weight": null
+    },
+    "mean_score": 0.6280052559995035,
+    "std_score": 0.07164114700124054,
+    "dsr_cv_trials": {
+      "n_trials": 25,
+      "best_sr": 8.765985502558033,
+      "expected_max_sr": 3.1769161463539324,
+      "dsr": 0.9354803425539361,
+      "best_mean": 0.6280052559995035,
+      "best_std": 0.07164114700124054,
+      "best_skew": -1.3975992040382894,
+      "best_kurt": 3.133205567209846
+    }
+  },
+  "xgb": {
+    "params": {
+      "subsample": 0.8,
+      "reg_lambda": 10.0,
+      "n_estimators": 200,
+      "max_depth": 7,
+      "learning_rate": 0.01,
+      "gamma": 0.0,
+      "colsample_bytree": 0.5
+    },
+    "mean_score": 0.6456052951684186,
+    "std_score": 0.08018553953393556,
+    "dsr_cv_trials": {
+      "n_trials": 25,
+      "best_sr": 8.05139304319565,
+      "expected_max_sr": 6.843454187445143,
+      "dsr": 0.6592385952835567,
+      "best_mean": 0.6456052951684186,
+      "best_std": 0.08018553953393556,
+      "best_skew": -0.8999704307275389,
+      "best_kurt": 2.629551890938731
+    }
+  },
+  "meta": {
+    "n_iter_per_model": 25,
+    "cv": "PurgedKFold(n_splits=5, pct_embargo=0.01)",
+    "scoring": "accuracy (weighted)",
+    "baseline_majority": 0.5846153846153846,
+    "dsr_caveat": "DSR here is over CV trial sharpes (in-sample), not strategy-return sharpes; that belongs to the backtesting stage."
+  }
+}
