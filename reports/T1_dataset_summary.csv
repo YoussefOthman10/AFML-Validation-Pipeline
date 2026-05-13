@@ -1,0 +1,15 @@
+,T1: Dataset Summary
+Asset,NVIDIA Corporation (NVDA)
+Frequency,Daily (trading days)
+Observations,5113
+Date range,2005-01-04 to 2025-04-30
+Adj Close min,$0.135
+Adj Close max,$149.38
+Mean daily log return,0.00126
+Std daily log return,0.03093
+Skewness,-0.2780
+Excess kurtosis,8.7715
+Jarque-Bera stat,16417.43
+JB p-value,0.00e+00
+Outlier days (>5sigma),11
+Missing values,0

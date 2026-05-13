@@ -58,8 +58,8 @@ def avg_active_signals(signals, t1):
 
 
 def discrete_signal(signal, step_size=0.1):
-    """Round signal to nearest step_size. AFML Snippet 10.3."""
-    return (signal / step_size).round() * step_size
+    """Round signal to nearest step_size, then clip to [-1, 1]. AFML Snippet 10.3."""
+    return ((signal / step_size).round() * step_size).clip(-1, 1)
 
 
 def build_daily_positions(avg_positions, daily_index):

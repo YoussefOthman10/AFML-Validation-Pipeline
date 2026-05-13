@@ -9,8 +9,8 @@ import numpy as np
 import pandas as pd
 
 
-def generate_trending(n: int = 5000, drift: float = 0.0005,
-                      vol: float = 0.02, seed: int = 42) -> pd.Series:
+def generate_trending_series(n: int = 5000, drift: float = 0.0005,
+                             vol: float = 0.02, seed: int = 42) -> pd.Series:
     """
     Geometric Brownian Motion with positive drift (trending series).
 
@@ -26,9 +26,9 @@ def generate_trending(n: int = 5000, drift: float = 0.0005,
     return pd.Series(p, index=idx, name="synthetic_trending")
 
 
-def generate_mean_reverting(n: int = 5000, theta: float = 0.1,
-                             mu: float = 100.0, vol: float = 2.0,
-                             seed: int = 42) -> pd.Series:
+def generate_mean_reverting_series(n: int = 5000, theta: float = 0.1,
+                                   mu: float = 100.0, vol: float = 2.0,
+                                   seed: int = 42) -> pd.Series:
     """
     Ornstein-Uhlenbeck (mean-reverting) process.
 
@@ -44,3 +44,8 @@ def generate_mean_reverting(n: int = 5000, theta: float = 0.1,
         prices.append(prices[-1] + dp)
     idx = pd.bdate_range(end="2025-01-01", periods=n)
     return pd.Series(prices, index=idx, name="synthetic_mean_reverting")
+
+
+# Backward-compatible aliases
+generate_trending = generate_trending_series
+generate_mean_reverting = generate_mean_reverting_series

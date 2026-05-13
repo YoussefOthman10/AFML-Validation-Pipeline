@@ -21,7 +21,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.base import clone
 
-from src.cross_validation import cv_score, weighted_score
+try:
+    from cross_validation import cv_score, weighted_score
+except ImportError:
+    from src.cross_validation import cv_score, weighted_score
 
 
 def feat_imp_MDI(clf, feature_names: Iterable[str]) -> pd.DataFrame:

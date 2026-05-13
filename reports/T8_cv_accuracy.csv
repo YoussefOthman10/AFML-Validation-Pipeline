@@ -1,0 +1,7 @@
+Model,Mean weighted CV accuracy,Std,Beats baseline
+Majority baseline,0.5846,,—
+RF (untuned),0.46063104188682363,0.1800398243852574,False
+XGB (untuned),0.4674700224666965,0.1814010467664195,False
+RF (tuned),0.6280052559995035,0.07164114700124054,True
+XGB (tuned),0.6456052951684186,0.08018553953393556,True
+"RF (final, 15 feat)",0.6411,0.093,True

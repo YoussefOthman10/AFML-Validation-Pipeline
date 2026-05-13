@@ -1,0 +1,9 @@
+Method,Reason,Approximation / Status
+Tick bars,Require tick-level timestamps and prices,Approximate via daily dollar volume bars
+Volume bars (exact),Need intraday trade-by-trade volume,Cumulate daily volume
+Tick imbalance bars,Need signed tick sequences,Not implementable; theory only
+VPIN,Requires tick-level BVC classification,Approximate from daily O/C direction
+Kyle Lambda,Needs trade-by-trade price impact regression,Not implementable
+Roll spread (accurate),Needs high-freq covariance of price changes,Approximate from daily returns (noisy)
+Hasbrouck info share,Needs multivariate tick data,Not implementable
+CUSUM on tick returns,Designed for intraday returns,Applied to daily returns — valid approx.

@@ -1,0 +1,18 @@
+Feature,Description
+ret_5d,5-day rolling log return
+ret_10d,10-day rolling log return
+ret_20d,20-day rolling log return (medium-horizon momentum)
+ret_60d,60-day rolling log return
+momentum_12_1,252-day minus 21-day log return (12-month momentum)
+rsi_14,14-day RSI using Wilders smoothing
+vol_20d,20-day rolling volatility (annualised)
+vol_50d,50-day rolling volatility (annualised)
+log_dollar_volume,log(Adj Close x Volume) — trading activity proxy
+volume_ratio,Volume / 20-day average volume — abnormal activity
+corwin_schultz_spread,CS bid-ask spread from H/L (daily OHLCV approx.)
+bekker_parkinson_vol,Range-based daily variance from H/L
+amihud_illiquidity,"|return| / dollar volume, 20-day mean — price impact"
+roll_spread,Roll (1984) spread from return serial covariance
+shannon_entropy,50-day rolling Shannon entropy of discretised returns
+lempel_ziv_complexity,50-day rolling normalised LZ-76 complexity
+fracdiff,"FFD log-price at optimal d*=0.25 (ADF p=0.012, corr=0.916)"

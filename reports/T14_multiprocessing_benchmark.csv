@@ -1,0 +1,4 @@
+num_threads,elapsed_s,speedup
+1,0.003,1.0
+2,0.489,0.006
+4,0.576,0.005
